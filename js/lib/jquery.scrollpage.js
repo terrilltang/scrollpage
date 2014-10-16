@@ -44,6 +44,9 @@
         define_height();
         scroll.eq(0).addClass("curr");
         function start_scroll(direction) {
+            $(window).unmousewheel();
+            scroll_html.unmousewheel();
+            scroll_body.unmousewheel();
             if (scroll_page.is(":animated")) {
                 return false;
             }
@@ -57,7 +60,7 @@
                 }
                 ++i;
 
-                scroll_page.stop(true, true).animate({
+                scroll_page.stop().animate({
                     top: curr_top - curr_h + "px"
                 }, {
                     easing: easing,
@@ -70,7 +73,7 @@
                     return false;
                 }
                 --i;
-                scroll_page.stop(true, true).animate({
+                scroll_page.stop().animate({
                     top: curr_top + curr_h + "px"
                 }, {
                     easing: easing,
@@ -84,6 +87,7 @@
         }
 
         scroll_page.mousewheel(function (event) {
+            event.preventDefault();
             start_scroll(event.deltaY);
         });
         $(window).resize(function () {
@@ -100,12 +104,13 @@
             event.preventDefault();
             start_scroll(1);
         });
-        $(document).on('keyup', function (event) {
+        $(document).on('keydown', function (event) {
+            event.stopPropagation()
             if (scroll_page.length > 0) {
                 if (event.keyCode == 38) {
-                    start_scroll(1);
+                    start_scroll(2);
                 } else if (event.keyCode == 40) {
-                    start_scroll(-1);
+                    start_scroll(-2);
                 }
             }
         });
