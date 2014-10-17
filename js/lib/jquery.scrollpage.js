@@ -44,9 +44,6 @@
         define_height();
         scroll.eq(0).addClass("curr");
         function start_scroll(direction) {
-            $(window).unmousewheel();
-            scroll_html.unmousewheel();
-            scroll_body.unmousewheel();
             if (scroll_page.is(":animated")) {
                 return false;
             }
@@ -104,16 +101,20 @@
             event.preventDefault();
             start_scroll(1);
         });
-        $(document).on('keydown', function (event) {
-            event.stopPropagation()
-            define_height();
+
+        $(document).keyup(function (event) {
+            event.stopPropagation();
             if (scroll_page.length > 0) {
                 if (event.keyCode == 38) {
                     start_scroll(2);
-                } else if (event.keyCode == 40) {
+                }
+                if (event.keyCode == 40) {
                     start_scroll(-2);
                 }
             }
+        });
+        $(document).keydown(function(event){
+           event.preventDefault();
         });
 
 
