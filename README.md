@@ -1,4 +1,4 @@
-***jquery mousewheel scroll full page***
+#Jquery mousewheel scroll full page
 
 ## how to use it?
 
@@ -12,9 +12,11 @@ index_simple.html
 
 jquery.mousewheel, jquery.easing(option)
 
+## Demo
 
+[Demo Example](http://terrilltang.github.io/index_simple.html "Jquery Mousewheel scroll full page")
 
-## License 
+## License
 
 (The MIT License)
 
