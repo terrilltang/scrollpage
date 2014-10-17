@@ -21,9 +21,9 @@
                time:1000,
                complete:function(){
                    var curr=$(".curr");
-                   console.log(curr.index());
-                   curr.find(".content").slideDown(500,function(){
-                       curr.siblings().find(".content").slideUp(800);
+                   /*console.log(curr.index());*/
+                   curr.find(".content").stop(true,true).show(500,function(){
+                       curr.siblings().find(".content").stop(true,true).hide(800);
                    });
                }
            });
@@ -31,9 +31,7 @@
     </script>
 </head>
 <body>
-<div class="title">
-    <h1>Welcome to use scrollpage for your web project!</h1>
-</div>
+
 <div class="scroll_page">
     <div class="page first">
         <div class="content">

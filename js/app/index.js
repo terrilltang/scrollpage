@@ -10,7 +10,7 @@ define(['jquery', 'jquery.scrollpage', 'jquery.easing'], function ($) {
             time:1000,
             complete:function(){
                 var curr=$(".curr");
-                console.log(curr.index());
+                /*console.log(curr.index());*/
                 curr.find(".content").slideDown(500,function(){
                     curr.siblings().find(".content").slideUp(800);
                 });
