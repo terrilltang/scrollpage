@@ -106,6 +106,7 @@
         });
         $(document).on('keydown', function (event) {
             event.stopPropagation()
+            define_height();
             if (scroll_page.length > 0) {
                 if (event.keyCode == 38) {
                     start_scroll(2);
