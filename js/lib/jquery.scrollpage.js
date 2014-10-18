@@ -44,10 +44,9 @@
         define_height();
         scroll.eq(0).addClass("curr");
         function start_scroll(direction) {
-            if (scroll_page.is(":animated")) {
+            if (scroll_page.is(":animated") || scroll.eq(i).find(":animated").length>0) {
                 return false;
             }
-
             var curr_top = parseInt(scroll_page.offset().top)
                 , curr_h = parseInt($(window).height());
 
