@@ -6,7 +6,7 @@ please git clone and check html files
 
 index.html (use requirejs)
 
-index_simple.html
+scroll-page.html
 
 ## plugins dependence
 
@@ -14,7 +14,8 @@ jquery.mousewheel, jquery.easing(option)
 
 ## Demo
 
-[Demo Example](http://terrilltang.github.io/index_simple.html "Jquery Mousewheel scroll full page")
+[Demo Example](http://terrilltang.github.io/scroll-page.html "Jquery Mousewheel scroll full page") &nbsp;&nbsp;: http://terrilltang.github.io/scroll-page.html 
+
 
 ## License
 
