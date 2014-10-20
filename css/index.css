@@ -29,3 +29,9 @@ body{font-family:Roboto, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sa
 .scroll_page .third{background:#906894;}
 .scroll_page .fourth{background:#8F8C2A;}
 .scroll_page .fifth{background:#596B47;}
+
+
+/*SCROLL PAGE NAV*/
+.scroll_page ol.scroll_nav{position:fixed;width:14px;right:80px;top:50%;margin-top:-24px;bottom:0;z-index:19861108;padding:0 0;}
+.scroll_page ol.scroll_nav li{width:12px;height:12px;margin:10px auto;background:none;border:1px solid #DDD;border-radius:12px;text-indent:-99px;overflow:hidden;cursor:pointer;}
+.scroll_page ol.scroll_nav li.curr_page{background:#DDD;}
